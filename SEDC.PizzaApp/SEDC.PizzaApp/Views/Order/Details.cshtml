@@ -1,0 +1,16 @@
+﻿@model Order
+<h2>This is the Details View from the Order Controller.</h2>
+
+<h2>Order details:</h2>
+<p>Id: @Model.Id</p>
+
+
+@if (Model.IsDelivered)
+{
+    <p>This pizza is delivered.</p>
+}
+else
+{
+    <p>This pizza is not delivered yet.</p>
+}
+<p>Price: @Model.Price</p>
