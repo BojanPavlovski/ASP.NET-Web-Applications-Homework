@@ -1,0 +1,18 @@
+﻿@using SEDC.PizzaApp.ViewModels;
+@model List<PizzaViewModel>
+@*the data that is sent from the method is of type List<Pizza>*@
+
+<h2>Pizzas:</h2>
+
+<table border="1">
+    <tr><td>Name</td><td>Price</td><td>Size</td></tr>
+    @foreach (PizzaViewModel pizza in @Model)
+    {
+        <tr>
+            <td>@pizza.Name</td> &nbsp;
+            <td>@pizza.Price</td>
+            <td>@pizza.PizzaSize</td>
+        </tr>
+    }
+</table>
+

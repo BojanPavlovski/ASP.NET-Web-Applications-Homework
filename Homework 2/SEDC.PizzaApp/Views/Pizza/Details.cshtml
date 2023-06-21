@@ -1,0 +1,16 @@
+﻿@using SEDC.PizzaApp.ViewModels;
+@model PizzaViewModel
+
+<h2>Pizza details:</h2>
+<p>Name: @Model.Name</p>
+<P>Size: @Model.PizzaSize</P>
+@*Use the property HasExtras in the Pizza Mapper, 
+so if it is true the price returned in the view model should be increased by 10.*@
+
+@{
+if (Model.HasExtra)
+{
+    Model.Price += 10;
+}
+}
+<p>Price: @Model.Price</p>
