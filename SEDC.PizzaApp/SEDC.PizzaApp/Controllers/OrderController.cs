@@ -26,7 +26,7 @@ namespace SEDC.PizzaApp.Controllers
                 return new EmptyResult();
             }
 
-            Order order = StaticOrderDb.Orders.FirstOrDefault(x => x.Id == id);
+            Order order = StaticDb.Orders.FirstOrDefault(x => x.Id == id);
             if (order == null)
             {
                 return new EmptyResult();
@@ -51,7 +51,7 @@ namespace SEDC.PizzaApp.Controllers
         //Add an action that redirects to Action Index in Home Controller.
         public IActionResult ReturnsActionIndex()
         {
-            return RedirectToAction("Index", "Order");
+            return RedirectToAction("Index", "Home");
         }
     }
 }
