@@ -1,0 +1,14 @@
+﻿@model List<SeeUsersViewModel>
+
+<h3>All users in the  system:</h3>
+
+<table border="1">
+    <tr><td>Users</td></tr>
+    @foreach (SeeUsersViewModel user in @Model)
+    {
+        <tr>
+            <td>@user.UserFullName</td>
+
+        </tr>
+    }
+</table>
